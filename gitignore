@@ -1,5 +1,6 @@
 #폴더
 .venv/
+.devcontainer/
 goorm/
 node_modules/
 build/
