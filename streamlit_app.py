@@ -30,7 +30,11 @@ def create_agent_chain(history):
 st.title("🎈단비노트 챗봇서비스🎈")
 
 history = StreamlitChatMessageHistory()
-prompt = st.chat_input("어떤 영어단어가 궁금하신가요???")
+prompt = st.chat_input("""
+당신은 영어 사전 전문가입니다. 사용자가 입력한 영어 단어의 정의, 예문, 발음 등을 정확하게 제공해 주세요.
+
+사용자 질문: {input}
+""")
 
 if prompt:
     with st.chat_message("user"):
